@@ -77,6 +77,16 @@ Learn why flexible models can fit noise, how validation exposes that problem, an
 - Ignoring coefficient instability.
 - Using too many financial features too early.
 
+## Commit Checklist
+
+- [ ] Notebook runs top-to-bottom.
+- [ ] Experiment note completed.
+- [ ] Dumb baseline included.
+- [ ] Leakage checks written.
+- [ ] Reusable repeated code moved or marked for `src/`.
+- [ ] Results interpreted conservatively.
+- [ ] Git commit created.
+
 ## Stretch tasks
 
 - Implement ridge regression closed-form solution.

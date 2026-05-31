@@ -74,6 +74,16 @@ Learn decision trees, random forests, and gradient boosting as flexible nonlinea
 - Adding XGBoost/LightGBM before understanding scikit-learn models.
 - Ignoring period-specific model instability.
 
+## Commit Checklist
+
+- [ ] Notebook runs top-to-bottom.
+- [ ] Experiment note completed.
+- [ ] Dumb baseline included.
+- [ ] Leakage checks written.
+- [ ] Reusable repeated code moved or marked for `src/`.
+- [ ] Results interpreted conservatively.
+- [ ] Git commit created.
+
 ## Stretch tasks
 
 - Try XGBoost or LightGBM only after the scikit-learn comparisons are complete.

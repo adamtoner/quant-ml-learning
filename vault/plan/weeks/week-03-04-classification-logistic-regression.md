@@ -78,6 +78,16 @@ Learn classification as probability modelling and decision-making under noisy la
 - Treating AUC as sufficient evidence of usefulness.
 - Creating labels before checking timestamp alignment.
 
+## Commit Checklist
+
+- [ ] Notebook runs top-to-bottom.
+- [ ] Experiment note completed.
+- [ ] Dumb baseline included.
+- [ ] Leakage checks written.
+- [ ] Reusable repeated code moved or marked for `src/`.
+- [ ] Results interpreted conservatively.
+- [ ] Git commit created.
+
 ## Stretch tasks
 
 - Implement logistic regression gradient descent from scratch.

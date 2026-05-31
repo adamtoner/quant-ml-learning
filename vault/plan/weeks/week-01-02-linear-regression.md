@@ -42,10 +42,10 @@ Learn linear regression as geometry, optimisation, and a practical forecasting b
 
 ## Reading resources
 
-- Mathematics for Machine Learning: Use the linear algebra sections on vectors, matrices, inner products, projections, and least squares.
-- An Introduction to Statistical Learning: Use the linear regression chapter for interpretation, residuals, and model assessment.
-- NumPy documentation: Use `ndarray`, broadcasting, and `numpy.linalg`.
-- scikit-learn documentation: Use `LinearRegression` and regression metrics.
+- Mathematics for Machine Learning: Study matrix notation, inner products, norms, and least-squares/projection material.
+- An Introduction to Statistical Learning: Use the linear regression chapter, focusing on interpretation, residuals, and model assessment.
+- scikit-learn documentation: Use `LinearRegression`, `mean_squared_error`, and `r2_score`.
+- NumPy documentation: Use `ndarray`, broadcasting, matrix multiplication, and `numpy.linalg`.
 
 ## Deliverables
 
@@ -78,6 +78,16 @@ Learn linear regression as geometry, optimisation, and a practical forecasting b
 - Forgetting an intercept term in the scratch implementation.
 - Comparing models on different train/test splits.
 - Reading residual plots as proof of tradability.
+
+## Commit Checklist
+
+- [ ] Notebook runs top-to-bottom.
+- [ ] Experiment note completed.
+- [ ] Dumb baseline included.
+- [ ] Leakage checks written.
+- [ ] Reusable repeated code moved or marked for `src/`.
+- [ ] Results interpreted conservatively.
+- [ ] Git commit created.
 
 ## Stretch tasks
 

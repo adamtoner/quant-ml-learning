@@ -38,3 +38,12 @@
 - Backtests are research tools, not evidence of tradability by themselves.
 - Include transaction costs, turnover, missing data, survivorship, and rebalance timing before treating results seriously.
 - Prefer process quality over strategy optimisation in the first 12 weeks.
+
+## Not Yet: First 12 Weeks
+
+- No neural networks.
+- No XGBoost or LightGBM except as explicit stretch tasks.
+- No options, crypto, or single-stock live trading models.
+- No intraday data.
+- No live trading decisions from learning notebooks.
+- No parameter search purely to make backtests look good.

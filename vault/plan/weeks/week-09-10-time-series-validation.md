@@ -78,6 +78,16 @@ Make validation design the centre of the research process. Learn why random trai
 - Ignoring overlapping labels in multi-month targets.
 - Selecting models based on the final test period.
 
+## Commit Checklist
+
+- [ ] Notebook runs top-to-bottom.
+- [ ] Experiment note completed.
+- [ ] Dumb baseline included.
+- [ ] Leakage checks written.
+- [ ] Reusable repeated code moved or marked for `src/`.
+- [ ] Results interpreted conservatively.
+- [ ] Git commit created.
+
 ## Stretch tasks
 
 - Add an embargo gap between train and test periods for overlapping labels.

@@ -1,8 +1,8 @@
-# Weeks 11-12: Mini-Project - ETF Ranking Or Regime Classification
+# Weeks 11-12: Mini-Project - ETF Above-Median Classification
 
 ## Purpose
 
-Complete a small, disciplined ETF modelling project. The goal is learning, not trading advice. The output should show that you can define a target, build timestamp-safe features, compare baselines and models, validate chronologically, and write a failure-mode analysis.
+Complete a small, disciplined ETF modelling project. The goal is learning, not trading advice. The core task is to classify next-month above-median ETF return for a small ETF universe, then compare a momentum baseline, logistic regression, and one ensemble model.
 
 ## Prerequisites
 
@@ -21,26 +21,32 @@ Complete a small, disciplined ETF modelling project. The goal is learning, not t
 ## ML lab stream - 4h/week
 
 - Define an ETF universe and monthly rebalance calendar.
-- Build a target such as whether an ETF outperforms the universe median over the next 1-3 months.
+- Use a core universe of 8-12 ETFs.
+- Build one core target: whether an ETF outperforms the universe median next month.
 - Build timestamp-safe features: 1m, 3m, 6m, and 12m return; volatility; drawdown; moving-average distance; correlation to broad market.
-- Fit logistic regression, ridge/lasso where relevant, random forest, and gradient boosting.
-- Compare against simple momentum ranking, equal weight, and always-risk-on or class-majority baseline.
+- Fit logistic regression and one ensemble model: random forest or gradient boosting.
+- Compare against a simple momentum baseline and class-majority baseline.
 - Validate with walk-forward or chronological validation.
+
+Core models:
+
+- Momentum baseline.
+- Logistic regression.
+- Random forest or gradient boosting, not both.
 
 ## Coding tasks
 
 - [ ] Create one mini-project notebook.
-- [ ] Define ETF universe and date range.
+- [ ] Define a core universe of 8-12 ETFs and a date range.
 - [ ] Build monthly returns and rebalance timestamps.
 - [ ] Create 1m, 3m, 6m, and 12m return features.
 - [ ] Create volatility, drawdown, moving-average distance, and broad-market correlation features.
-- [ ] Create a next 1-3 month outperformance target.
+- [ ] Create one target: next-month above-median ETF return.
 - [ ] Check target shifting and feature availability.
+- [ ] Implement a momentum baseline.
 - [ ] Fit logistic regression.
-- [ ] Fit ridge or lasso where relevant.
-- [ ] Fit random forest.
-- [ ] Fit gradient boosting.
-- [ ] Compare against simple momentum, equal-weight, and class-majority or always-risk-on baselines.
+- [ ] Fit one ensemble model: random forest or gradient boosting.
+- [ ] Compare against momentum and class-majority baselines.
 - [ ] Use chronological or walk-forward validation.
 - [ ] Produce plots and a comparison table.
 - [ ] Write a failure-mode analysis.
@@ -48,25 +54,26 @@ Complete a small, disciplined ETF modelling project. The goal is learning, not t
 ## Reading resources
 
 - An Introduction to Statistical Learning: Revisit classification, regularisation, and tree-based methods as needed.
-- scikit-learn documentation: Use metrics, pipelines, logistic regression, ridge/lasso, random forest, and gradient boosting.
+- scikit-learn documentation: Use metrics, pipelines, logistic regression, random forest, and gradient boosting.
 - pandas documentation: Use rolling windows, grouped feature construction, `shift`, and date indexing.
 - Advances in Financial Machine Learning: Use leakage, label, and validation warnings selectively; do not attempt advanced machinery unless the basic project is complete.
 
 ## Deliverables
 
-- Notebook: ETF ranking or regime-classification mini-project.
+- Notebook: ETF next-month above-median classification mini-project.
 - Short research note with hypothesis, target, data, features, validation, metrics, results, and failure modes.
-- Plots: feature diagnostics, validation-window performance, confusion matrix or ranking performance, drawdown if allocation is simulated.
+- Plots: feature diagnostics, validation-window performance, and confusion matrix or ranking performance.
 - Comparison table: baselines vs models.
 - Failure-mode analysis.
 
 ## Acceptance criteria
 
 - The project states clearly that it is for learning and is not trading advice.
-- The target is defined before modelling.
+- The core universe contains 8-12 ETFs.
+- The only core target is next-month above-median ETF return.
 - Every feature is timestamp-safe.
-- At least three baselines are included: simple momentum ranking, equal-weight, and class-majority or always-risk-on.
-- Logistic regression, random forest, and gradient boosting are compared on the same validation design.
+- Momentum and class-majority baselines are included.
+- Logistic regression and one ensemble model are compared on the same validation design.
 - Walk-forward or chronological validation is used.
 - Results include metrics, plots, and a written interpretation.
 - The conclusion explains why the result is or is not worth extending.
@@ -84,14 +91,26 @@ Complete a small, disciplined ETF modelling project. The goal is learning, not t
 
 - Treating the mini-project as a trading system.
 - Optimising the target, feature set, and model until the backtest looks good.
-- Ignoring equal-weight and momentum baselines.
+- Ignoring the momentum and class-majority baselines.
 - Using overlapping labels without thinking about validation.
 - Confusing classification accuracy with portfolio usefulness.
 - Failing to write down negative results.
 
+## Commit Checklist
+
+- [ ] Notebook runs top-to-bottom.
+- [ ] Experiment note completed.
+- [ ] Dumb baseline included.
+- [ ] Leakage checks written.
+- [ ] Reusable repeated code moved or marked for `src/`.
+- [ ] Results interpreted conservatively.
+- [ ] Git commit created.
+
 ## Stretch tasks
 
+- Add the second ensemble model not used in the core comparison.
+- Add a 3-month target.
 - Add a simple top-N allocation simulation.
 - Add transaction cost and turnover estimates.
-- Compare 1-month vs 3-month targets.
-- Add permutation importance or coefficient stability analysis.
+- Add permutation importance.
+- Add coefficient stability analysis.

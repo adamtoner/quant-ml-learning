@@ -32,6 +32,7 @@ The weekly time split is roughly:
     └── plan/
         ├── roadmap.md
         ├── principles.md
+        ├── repo-workflow.md
         ├── resources.md
         ├── glossary.md
         ├── experiment-note-template.md
@@ -46,9 +47,11 @@ The weekly time split is roughly:
 
 ## How To Use The Plan
 
-Start with `vault/plan/principles.md`, then read `vault/plan/roadmap.md`. Work through the files in `vault/plan/weeks/` in order. Each 2-week block has strict acceptance criteria; do not move on until the deliverables are written and the common traps have been checked.
+Start with `vault/plan/principles.md`, then read `vault/plan/roadmap.md` and `vault/plan/repo-workflow.md`. Work through the files in `vault/plan/weeks/` in order. Each 2-week block has strict acceptance criteria; do not move on until the deliverables are written and the common traps have been checked.
 
 Use `vault/plan/experiment-note-template.md` for every notebook, model comparison, or backtest-like experiment. Keep notes short, factual, and specific.
+
+Notebooks are for experiments, explanation, and plots. They should not become the only source of project logic. Repeated data cleaning, feature construction, validation, metric, or plotting code should be extracted into `src/` once it appears in more than one notebook.
 
 ## Weekly Workflow
 
