@@ -1,0 +1,29 @@
+# Glossary
+
+- Feature: An input variable used by a model to make a prediction.
+- Target: The value the model is trained to predict.
+- Label: A target value attached to an observation, often used in classification.
+- Training set: Data used to fit model parameters.
+- Validation set: Data used to compare models or tune parameters without touching the final test set.
+- Test set: Data held out for final evaluation after modelling choices are fixed.
+- Leakage: Any information entering training that would not be available at prediction time.
+- Overfitting: Learning noise or sample-specific patterns that do not generalise.
+- Baseline: A simple reference model or rule that a more complex model must beat.
+- MSE: Mean squared error, the average squared difference between predictions and actual values.
+- R²: Proportion of variance explained by a regression model relative to a mean baseline.
+- Residual: Actual value minus predicted value.
+- Gradient descent: An iterative optimisation method that updates parameters in the direction that reduces loss.
+- Chronological split: A train/test split that preserves time order.
+- Walk-forward validation: Repeated time-series evaluation where training occurs on past data and testing occurs on a later period.
+- Regularisation: A penalty that discourages overly complex model parameters.
+- Ridge regression: Linear regression with an L2 penalty on coefficients.
+- Lasso regression: Linear regression with an L1 penalty that can shrink some coefficients to zero.
+- Logistic regression: A linear classification model that maps features to class probabilities through the logistic function.
+- Classification: Predicting a discrete class label.
+- Confusion matrix: A table comparing predicted classes against actual classes.
+- Precision: Of predicted positives, the fraction that are true positives.
+- Recall: Of actual positives, the fraction correctly predicted positive.
+- ROC/AUC: ROC plots true positive rate against false positive rate; AUC summarises the curve.
+- Drawdown: Decline from a previous portfolio or asset peak to a later trough.
+- Volatility: Variation in returns, commonly measured by standard deviation.
+- Sharpe ratio: Excess return divided by volatility, usually annualised in finance.
